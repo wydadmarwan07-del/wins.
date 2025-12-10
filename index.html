@@ -326,7 +326,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.72);
+            background: rgba(0, 0, 0, 0.85);
             z-index: 1;
         }
 
@@ -362,11 +362,40 @@
         .hero-name {
             font-size: 3rem;
             font-weight: bold;
-            background: linear-gradient(45deg, #d4af37, #e50914);
+            background: linear-gradient(45deg, #ff4500, #ff6347, #ffd700, #ff4500);
+            background-size: 400% 400%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+            text-shadow:
+                0 0 10px #ff4500,
+                0 0 20px #ff6347,
+                0 0 30px #ffd700,
+                0 0 40px #ff4500;
+            animation: fire-flicker 2s infinite alternate, fire-glow 3s infinite;
             margin-bottom: 1rem;
+        }
+
+        @keyframes fire-flicker {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes fire-glow {
+            0%, 100% {
+                text-shadow:
+                    0 0 10px #ff4500,
+                    0 0 20px #ff6347,
+                    0 0 30px #ffd700,
+                    0 0 40px #ff4500;
+            }
+            50% {
+                text-shadow:
+                    0 0 15px #ff4500,
+                    0 0 30px #ff6347,
+                    0 0 45px #ffd700,
+                    0 0 60px #ff4500;
+            }
         }
 
         .hero-gjw9 {
@@ -686,6 +715,9 @@
 
         #about .left {
             flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         #about .right {
@@ -850,6 +882,7 @@
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
+            position: relative;
         }
 
         #stadium-vibes::before {
@@ -860,6 +893,20 @@
             right: 0;
             bottom: 0;
             background: rgba(0, 0, 0, 0.8);
+            z-index: 1;
+        }
+
+        #stadium-vibes::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("images/manar.png") no-repeat center center;
+            background-size: cover;
+            filter: blur(5px);
+            z-index: 0;
         }
 
         #stadium-vibes .content {
@@ -1169,7 +1216,7 @@
 
     <header>
         <div class="logo">
-            <img src="images/anime-logo.png" alt="BMN Logo">
+            <img src="images/wac.png" alt="BMN Logo">
         </div>
         <nav>
             <ul id="nav-links">
@@ -1200,7 +1247,7 @@
             <div class="hero-content">
                 <div class="hero-left">
                     <div class="hero-label">Hello, I am</div>
-                    <div class="hero-name">Marwane Ait Bmn</div>
+                    <div class="hero-name">MARWANE AIT BMN</div>
                     <div class="hero-gjw9">G J W 9</div>
                     <div class="hero-role">Photographer & Visual Designer</div>
                     <p class="hero-desc">Street, stadium and portrait photography.</p>
@@ -1216,7 +1263,7 @@
                     </div>
                 </div>
                 <div class="hero-right">
-                    <!-- Image now used as blurred background -->
+                    <!-- Right side now empty for balance -->
                 </div>
             </div>
             <img src="images/png.com.png" alt="Hero Image" class="hero-image">
@@ -1227,7 +1274,7 @@
             <p class="section-subtitle">From the streets and stands to the lens.</p>
             <div class="content">
                 <div class="left">
-                    <img src="images/anime-logo.png" alt="Anime Illustration">
+                    <img src="images/wins.png" alt="Wins Illustration" style="width: 100%; height: auto; object-fit: cover; border-radius: 10px;">
                 </div>
                 <div class="right">
                     <p>I'm Marwane Ait Bmn, a passionate photographer and visual designer based in Morocco. I am currently studying for my baccalaureate and I am a proud Wydadi.</p>
@@ -1319,9 +1366,11 @@
                     <img src="pngwing.com.png" alt="Wydad ">
                 </div>
             </div>
+            <img src="images/manar.png" alt="Manar Image" style="position: absolute; bottom: 2rem; right: 2rem; width: 150px; height: auto; border-radius: 10px; box-shadow: 0 0 20px rgba(229, 9, 20, 0.5); z-index: 3;">
         </section>
 
         <section id="services" class="fade-in">
+            <img src="images/wac.png" alt="WAC Image" style="position: absolute; top: -100px; right: 2rem; width: 200px; height: auto; border-radius: 10px; box-shadow: 0 0 20px rgba(229, 9, 20, 0.5); z-index: 1;">
             <h2 class="section-title">Services</h2>
             <p class="section-subtitle">What I can do for you.</p>
             <div class="services-grid">
@@ -1349,6 +1398,7 @@
         </section>
 
         <section id="contact" class="fade-in">
+            <img src="images/wac.png" alt="WAC Image" style="position: absolute; top: -100px; right: 2rem; width: 200px; height: auto; border-radius: 10px; box-shadow: 0 0 20px rgba(229, 9, 20, 0.5); z-index: 1;">
             <h2 class="section-title">Contact</h2>
             <p class="section-subtitle">Let's work together or talk about your idea.</p>
             <div class="contact-content">
