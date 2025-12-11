@@ -1,6 +1,4 @@
-Add a 3D tilt hover effect to elements with the class `.tilt`. 
-The tilt should follow the mouse position, rotating up to 12 degrees, and return to normal on mouseleave. 
-Include a soft shadow that responds to the tilt.
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,16 +74,16 @@ Include a soft shadow that responds to the tilt.
         @keyframes loading-pulse {
             0%, 100% {
                 text-shadow:
-                    0 0 10px #e50914,
+                    0 0 10px #000000,
                     0 0 20px #e50914,
-                    0 0 30px #e50914,
+                    0 0 30px #000000,
                     0 0 40px #e50914;
             }
             50% {
                 text-shadow:
-                    0 0 15px #e50914,
+                    0 0 15px #000000,
                     0 0 30px #e50914,
-                    0 0 45px #e50914,
+                    0 0 45px #0c0c0c,
                     0 0 60px #e50914;
             }
         }
@@ -209,17 +207,17 @@ Include a soft shadow that responds to the tilt.
         .gjw9-visuals {
             font-size: 3vw;
             font-weight: 700;
-            color: #00ff2a;
+            color: #d4af37;
             text-shadow:
-                0 0 10px #00ff2a,
-                0 0 20px #00ff2a,
-                0 0 30px #00ff2a;
+                0 0 10px #e50914,
+                0 0 20px #e50914,
+                0 0 30px #e50914;
             animation: neon-pulse 2s infinite alternate;
         }
 
         @keyframes neon-pulse {
-            0% { text-shadow: 0 0 10px #00ff2a, 0 0 20px #00ff2a; }
-            100% { text-shadow: 0 0 15px #00ff2a, 0 0 30px #00ff2a, 0 0 45px #00ff2a; }
+            0% { text-shadow: 0 0 10px #e50914, 0 0 20px #d4af37; }
+            100% { text-shadow: 0 0 15px #d4af37, 0 0 30px #e50914, 0 0 45px #d4af37; }
         }
 
         .swordsman {
@@ -238,9 +236,9 @@ Include a soft shadow that responds to the tilt.
         }
 
         .swordsman svg {
-            width: 100%;
-            height: 100%;
-            filter: drop-shadow(0 0 20px #00ff2a);
+            width: 50%;
+            height: 50%;
+            filter: drop-shadow(0 0 20px #000000);
         }
 
         .slash {
@@ -249,10 +247,10 @@ Include a soft shadow that responds to the tilt.
             left: -100px;
             width: 100px;
             height: 4px;
-            background: linear-gradient(90deg, transparent, #fff, #00ff2a, #fff, transparent);
+            background: linear-gradient(90deg, transparent, #fff, #0f0f0f, #fff, transparent);
             transform: translateY(-50%) rotate(-15deg);
             opacity: 0;
-            box-shadow: 0 0 20px #fff, 0 0 40px #00ff2a, 0 0 60px #fff;
+            box-shadow: 0 0 20px #fff, 0 0 40px #070707, 0 0 60px #fff;
         }
 
         .slash.active {
@@ -269,19 +267,19 @@ Include a soft shadow that responds to the tilt.
                 left: 45vw;
                 opacity: 1;
                 transform: translateY(-50%) rotate(-15deg) scaleX(1.5);
-                box-shadow: 0 0 40px #fff, 0 0 80px #00ff2a, 0 0 120px #fff;
+                box-shadow: 0 0 40px #fff, 0 0 80px #000000, 0 0 120px #fff;
             }
             70% {
                 left: 50vw;
                 opacity: 1;
                 transform: translateY(-50%) rotate(-15deg) scaleX(2);
-                box-shadow: 0 0 60px #fff, 0 0 120px #00ff2a, 0 0 180px #fff;
+                box-shadow: 0 0 60px #fff, 0 0 120px #000000, 0 0 180px #fff;
             }
             100% {
                 left: calc(100vw + 100px);
                 opacity: 0;
                 transform: translateY(-50%) rotate(-15deg) scaleX(0.5);
-                box-shadow: 0 0 20px #fff, 0 0 40px #00ff2a, 0 0 60px #fff;
+                box-shadow: 0 0 20px #fff, 0 0 40px #0c0c0c, 0 0 60px #fff;
             }
         }
 
@@ -413,7 +411,7 @@ Include a soft shadow that responds to the tilt.
         }
 
         .social-icons a:hover {
-            color: #00ff2a;
+            color: #181818;
         }
 
         .burger {
@@ -450,17 +448,21 @@ Include a soft shadow that responds to the tilt.
             z-index: 1;
         }
 
-        #hero::after {
-            content: '';
+        .hero-video {
             position: absolute;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
-            background: url("https://i.postimg.cc/hjXmRYvL/telechargement-(23).jpg") no-repeat center center;
-            background-size: cover;
-            filter: blur(5px);
+            width: 100%;
+            height: 100%;
             z-index: 0;
+            pointer-events: none;
+        }
+
+        .hero-video iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            object-fit: cover;
         }
 
         .hero-content {
@@ -533,18 +535,18 @@ Include a soft shadow that responds to the tilt.
 
         .hero-gjw9 {
             font-size: 7vw;
-            color: #00ff2a;
+            color: #d4af37;
             font-weight: bold;
             text-shadow:
-                0 0 5px #00ff2a,
-                0 0 10px #00ff2a,
-                0 0 15px #00ff2a,
-                0 0 20px #00ff2a,
-                0 0 35px #00ff2a,
-                0 0 40px #00ff2a,
-                0 0 50px #00ff2a,
-                0 0 75px #00ff2a,
-                0 0 100px #00ff2a;
+                0 0 5px #d4af37,
+                0 0 10px #e50914,
+                0 0 15px #d4af37,
+                0 0 20px #e50914,
+                0 0 35px #d4af37,
+                0 0 40px #e50914,
+                0 0 50px #d4af37,
+                0 0 75px #e50914,
+                0 0 100px #e50914;
             animation: glitch 2s infinite, electric-spark 3s infinite;
             position: relative;
             margin-bottom: 1rem;
@@ -554,14 +556,9 @@ Include a soft shadow that responds to the tilt.
         .hero-gjw9:hover {
             transform: scale(1.05);
             text-shadow:
-                0 0 10px #00ff2a,
-                0 0 20px #00ff2a,
-                0 0 30px #00ff2a,
-                0 0 40px #00ff2a,
-                0 0 50px #00ff2a,
-                0 0 75px #00ff2a,
-                0 0 100px #00ff2a,
-                0 0 125px #00ff2a;
+                0 0 10px #d4af37,
+                0 0 20px #e50914,
+                0 0 30px #d4af37;
         }
 
         .hero-gjw9::before {
@@ -578,13 +575,13 @@ Include a soft shadow that responds to the tilt.
 
         .hero-gjw9::after {
             content: 'G J W 9';
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
-            color: #00ff2a;
+            color: #d4af37;
             z-index: -1;
             transform: translateX(3px) skewX(2deg);
-            text-shadow: 0 0 10px #00ff2a;
+            text-shadow: 0 0 10px #d4af37;
             animation: chromatic-shift-reverse 1.5s infinite;
         }
 
@@ -598,8 +595,8 @@ Include a soft shadow that responds to the tilt.
         }
 
         @keyframes electric-spark {
-            0%, 100% { text-shadow: 0 0 5px #00ff2a, 0 0 10px #00ff2a, 0 0 15px #00ff2a, 0 0 20px #00ff2a, 0 0 35px #00ff2a, 0 0 40px #00ff2a, 0 0 50px #00ff2a, 0 0 75px #00ff2a, 0 0 100px #00ff2a; }
-            50% { text-shadow: 0 0 5px #00ff2a, 0 0 10px #00ff2a, 0 0 15px #00ff2a, 0 0 20px #00ff2a, 0 0 35px #00ff2a, 0 0 40px #00ff2a, 0 0 50px #00ff2a, 0 0 75px #00ff2a, 0 0 100px #00ff2a, 0 0 150px #00ff2a; }
+            0%, 100% { text-shadow: 0 0 5px #000000, 0 0 10px #ff1e00, 0 0 15px #000000, 0 0 20px #991511, 0 0 35px #969595, 0 0 40px #757575, 0 0 50px #020202, 0 0 75px #000000, 0 0 100px #8d8686; }
+            50% { text-shadow: 0 0 5px #000000, 0 0 10px #db0909, 0 0 15px #000000, 0 0 20px #bb2424, 0 0 35px #787a79, 0 0 40px #a1a3a2, 0 0 50px #0d0e0d, 0 0 75px #0d0e0d, 0 0 100px #272424, 0 0 150px #a19d9d; }
         }
 
         @keyframes chromatic-shift {
@@ -751,7 +748,7 @@ Include a soft shadow that responds to the tilt.
             left: 10%;
             width: 20px;
             height: 2px;
-            background: #00ff2a;
+            background: #131313;
             transform: rotate(45deg);
             opacity: 0.7;
         }
@@ -1284,6 +1281,7 @@ Include a soft shadow that responds to the tilt.
             .hero-content {
                 flex-direction: column;
                 text-align: center;
+                padding: 0 1rem;
             }
 
             .hero-gjw9 {
@@ -1294,33 +1292,147 @@ Include a soft shadow that responds to the tilt.
                 font-size: 2rem;
             }
 
+            .hero-role {
+                font-size: 1.2rem;
+            }
+
+            .hero-desc {
+                font-size: 1rem;
+            }
+
             .hero-buttons {
                 justify-content: center;
+                flex-wrap: wrap;
+                gap: 1rem;
             }
 
             .btn-primary, .btn-secondary {
                 flex: 1;
                 max-width: 200px;
+                min-height: 50px; /* Touch-friendly */
             }
 
             .content {
                 flex-direction: column;
+                gap: 2rem;
             }
 
             .contact-content {
                 flex-direction: column;
+                gap: 2rem;
             }
 
             .highlights {
                 justify-content: center;
+                flex-wrap: wrap;
             }
 
             .tags {
                 justify-content: center;
+                flex-wrap: wrap;
             }
 
-            .hero-buttons {
-                justify-content: center;
+            .skills-grid, .portfolio-grid, .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .skill-card, .service-card {
+                padding: 1.5rem;
+            }
+
+            .portfolio-item img {
+                height: 200px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
+            }
+
+            footer {
+                padding: 1.5rem;
+            }
+
+            .social-icons {
+                gap: 1.5rem;
+            }
+
+            .social-icons a {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-gjw9 {
+                font-size: 14vw;
+            }
+
+            .hero-name {
+                font-size: 1.8rem;
+            }
+
+            .hero-role {
+                font-size: 1.1rem;
+            }
+
+            .hero-desc {
+                font-size: 0.95rem;
+            }
+
+            .btn-primary, .btn-secondary {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .skills-grid, .portfolio-grid, .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .skill-card, .service-card {
+                padding: 1rem;
+            }
+
+            .portfolio-item img {
+                height: 180px;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .section-subtitle {
+                font-size: 0.9rem;
+            }
+
+            .highlights .highlight {
+                min-width: 250px;
+            }
+
+            .tags span {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.85rem;
+            }
+
+            .contact-links a {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .loading-text {
+                font-size: 10vw;
+            }
+
+            .dima-wydad {
+                font-size: 6vw;
+            }
+
+            .gjw9-visuals {
+                font-size: 2.5vw;
             }
         }
 
@@ -1497,6 +1609,8 @@ Include a soft shadow that responds to the tilt.
         </div>
     </div>
 
+
+
     <!-- Intro Loading Screen -->
     <div id="intro-overlay">
         <div class="intro-text">
@@ -1546,8 +1660,20 @@ Include a soft shadow that responds to the tilt.
         </nav>
     </header>
 
+    <!-- Background Music -->
+    <audio id="background-music" muted>
+        <source src="https://s178.convertio.me/p/jBLZIcqSNoFO9_Cxf5I6aA/8fea54bbbf07c66b25f0e45c97ef25cb/dima-dima-WYDAD-GJW9_1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Play Music Button -->
+    <button id="play-music-btn" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; padding: 10px 20px; background: #e50914; color: white; border: none; border-radius: 5px; cursor: pointer; display: block;">Play Music</button>
+
     <main>
         <section id="hero">
+            <div class="hero-video">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/m9DhivK-rrw?autoplay=1&mute=1&controls=0&loop=1&playlist=m9DhivK-rrw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
             <div class="hero-content">
                 <div class="hero-left">
                     <div class="hero-label">Hello, I am</div>
@@ -1636,7 +1762,7 @@ Include a soft shadow that responds to the tilt.
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item tilt" data-category="portraits">
-                    <img src="https://i.postimg.cc/kXFX5dVx/Screenshot-2025-12-10-224622.png" alt="Portrait">
+                    <img src="https://i.postimg.cc/nrWKv002/a-high-quality-digit.png" alt="Portrait">
                     <div class="portfolio-label">Portrait – Red Light</div>
                 </div>
                 <div class="portfolio-item tilt" data-category="street">
@@ -1671,7 +1797,7 @@ Include a soft shadow that responds to the tilt.
                     <img src="https://i.postimg.cc/kXBphM7T/Screenshot-2025-11-30-124805.png" alt="Wydad ">
                 </div>
             </div>
-            
+
         </section>
 
         <section id="services" class="fade-in">
@@ -1745,7 +1871,7 @@ Include a soft shadow that responds to the tilt.
                 document.getElementById('loading-overlay').classList.add('hidden');
                 setTimeout(function() {
                     document.getElementById('intro-overlay').classList.add('hidden');
-                }, 1000);
+                }, 3000);
             }, 2000);
         });
 
@@ -1824,6 +1950,16 @@ Include a soft shadow that responds to the tilt.
             e.preventDefault();
             alert('Thank you for your message! I will get back to you soon.');
             contactForm.reset();
+        });
+
+        // Play Music Button
+        const playMusicBtn = document.getElementById('play-music-btn');
+        const backgroundMusic = document.getElementById('background-music');
+
+        playMusicBtn.addEventListener('click', function() {
+            backgroundMusic.muted = false;
+            backgroundMusic.play();
+            playMusicBtn.style.display = 'none';
         });
 
         // 3D Tilt Effect
