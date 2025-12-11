@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marwane Ait Bmn - GJW9 Visuals Portfolio</title>
+    <title>Marwane Ait Bmn - Wydad-AC- Visuals Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -887,7 +887,19 @@
 
         /* Skills */
         #skills {
-            background: #050509;
+            position: relative;
+        }
+
+        #skills::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("https://i.postimg.cc/RFnnDcSS/TURBA.jpg") no-repeat center center / cover;
+            filter: blur(5px);
+            z-index: -1;
         }
 
         .skills-grid {
