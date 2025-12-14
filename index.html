@@ -1922,8 +1922,8 @@
 
     <main>
         <section id="hero">
-            <video class="hero-video" autoplay muted playsinline>
-                <source src="https://export-download.canva.com/in8FA/DAG7fHin8FA/2/0-6143397509770230985.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUH5AO7UJ26%2F20251213%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251213T221931Z&X-Amz-Expires=55803&X-Amz-Signature=719f4adc08fb77b5a6c83479f4cc72648ff9c9ddf08015af677e3f06035b5291&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3DUTF-8%27%27Design%2520sans%2520titre.mp4&response-expires=Sun%2C%2014%20Dec%202025%2013%3A49%3A34%20GMT" type="video/mp4">
+            <video autoplay muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+                <source src="https://res.cloudinary.com/daparfgdi/video/upload/v1765716958/welcomes_z36mub.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <div class="hero-content">
@@ -1945,8 +1945,8 @@
             <p class="section-subtitle">From the streets and stands to the lens.</p>
             <div class="content">
                 <div class="right">
-                    <video controls style="width: 100%; aspect-ratio: 16/9; border-radius: 10px; margin-bottom: 1rem;">
-                        <source src="https://export-download.canva.com/SWDw4/DAG7fDSWDw4/5/0-6700717962219321959.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUH5AO7UJ26%2F20251213%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251213T221522Z&X-Amz-Expires=58147&X-Amz-Signature=92274d831873a0747a01899645d30fa03d67b046aa24eaacba64c7babbaac50e&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3DUTF-8%27%27marwane.mp4&response-expires=Sun%2C%2014%20Dec%202025%2014%3A24%3A29%20GMT" type="video/mp4">
+                    <video autoplay loop muted playsinline style="width: 100%; aspect-ratio: 16/9; border-radius: 10px; margin-bottom: 1rem;">
+                        <source src="https://res.cloudinary.com/daparfgdi/video/upload/v1765717558/marwane_q9z6g3.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     <p>I'm Marwane Ait Bmn, a passionate photographer and visual designer based in Morocco. I am currently studying for my baccalaureate and I am a proud Wydadi.</p>
@@ -1971,7 +1971,7 @@
 
         <section id="story" class="fade-in">
             <video class="story-video" autoplay loop muted playsinline>
-                <source src="https://export-download.canva.com/-pS1A/DAG7bv-pS1A/8/0-2012470689661043007.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUH5AO7UJ26%2F20251213%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251213T193837Z&X-Amz-Expires=16314&X-Amz-Signature=f404f9554947552ee9ba42e5684559f250314a111ec0131cc94b326b2c059672&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3DUTF-8%27%27lokman.mp4&response-expires=Sun%2C%2014%20Dec%202025%2000%3A10%3A31%20GMT" type="video/mp4">
+                <source src="https://res.cloudinary.com/daparfgdi/video/upload/v1765717329/motion2Fast_Animate_the_image_subtly_The_young_boy_remains_sti_0_sdqkdl.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <div class="story-content">
@@ -2243,11 +2243,7 @@
             playMusicBtn.style.display = 'none';
         });
 
-        // Video End Handler
-        const heroVideo = document.querySelector('.hero-video');
-        heroVideo.addEventListener('ended', function() {
-            heroVideo.style.display = 'none';
-        });
+        // Note: Iframe handles playback internally with loop=false, static background remains visible after video ends
 
         // 3D Tilt Effect
         const tiltElements = document.querySelectorAll('.tilt');
